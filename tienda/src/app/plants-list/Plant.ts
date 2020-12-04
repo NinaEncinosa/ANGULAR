@@ -4,4 +4,6 @@ export interface Plant {
   type: string;
   price: number;
   stock: number;
+  clearance: boolean;
+  quantity: number;
 }

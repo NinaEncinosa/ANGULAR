@@ -14,6 +14,8 @@ export class PlantsListComponent implements OnInit {
       type: 'semilla',
       price: 23,
       stock: 2,
+      clearance: false,
+      quantity: 0,
     },
     {
       image: 'assets/img/zanahoria.jpg',
@@ -21,6 +23,8 @@ export class PlantsListComponent implements OnInit {
       type: 'raiz',
       price: 61,
       stock: 5,
+      clearance: false,
+      quantity: 0,
     },
     {
       image: 'assets/img/espinaca.jpg',
@@ -28,6 +32,8 @@ export class PlantsListComponent implements OnInit {
       type: 'hoja',
       price: 25,
       stock: 3,
+      clearance: false,
+      quantity: 0,
     },
     {
       image: 'assets/img/cebolla.jpeg',
@@ -35,6 +41,8 @@ export class PlantsListComponent implements OnInit {
       type: 'bulbo',
       price: 55,
       stock: 6,
+      clearance: true,
+      quantity: 0,
     },
     {
       image: 'assets/img/brocoli.jpg',
@@ -42,10 +50,20 @@ export class PlantsListComponent implements OnInit {
       type: 'flor',
       price: 42,
       stock: 0,
+      clearance: false,
+      quantity: 0,
     },
   ];
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  upQuantity(plant: Plant): void {
+    if (plant.quantity < plant.stock) plant.quantity++;
+  }
+
+  downQuantity(plant: Plant): void {
+    if (plant.quantity > 0) plant.quantity--;
+  }
 }

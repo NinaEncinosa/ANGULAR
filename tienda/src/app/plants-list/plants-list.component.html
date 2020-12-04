@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Precio</th>
+      <th>Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let plant of plants">
+      <td><img [src]="plant.image" [alt]="plant.name" srcset="" /></td>
+      <td>{{ plant.name }}</td>
+      <td>{{ plant.type }}</td>
+      <td>{{ plant.price }}</td>
+      <td class="btn btn-danger" *ngIf="plant.stock == 0">SIN STOCK</td>
+      <td class="btn btn-success" *ngIf="plant.stock != 0">Comprar</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,9 @@
+<td>
+  <button (click)="downQuantity()">
+    <i class="fa fa-minus-circle" aria-hidden="true"></i>
+  </button>
+  <input type="text" [(ngModel)]="quantity" (keyup)="changeQuantity($event)">
+  <button (click)="upQuantity()">
+    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+  </button>
+</td>

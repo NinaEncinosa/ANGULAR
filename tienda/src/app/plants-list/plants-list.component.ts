@@ -59,11 +59,7 @@ export class PlantsListComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  upQuantity(plant: Plant): void {
-    if (plant.quantity < plant.stock) plant.quantity++;
-  }
-
-  downQuantity(plant: Plant): void {
-    if (plant.quantity > 0) plant.quantity--;
+  maxReached(m: string) {
+    alert(m);
   }
 }

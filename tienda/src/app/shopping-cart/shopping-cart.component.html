@@ -1,1 +1,8 @@
-<p>shopping-cart works!</p>
+<table class="table text-center">
+  <th>En el carrito:</th>
+  <tbody>
+    <tr *ngFor="let plant of (cartList$ | async)">
+      {{plant.name}}: {{plant.quantity}}
+    </tr>
+  </tbody>
+</table>
